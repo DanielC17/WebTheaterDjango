@@ -1,8 +1,8 @@
 class Video:
     
-    def __init__(self, id, titulo, descricao, img_url, video_url, data_publicacao, qtd_curtida, qtd_visualizacao):
+    def __init__(self, id, titulo, descricao, img_url, video_url, data_publi, qtd_curtida, qtd_visualizacao):
         self.id = id
-        self.titulo = titulo 
+        self.titulo = titulo
         self.descricao = descricao
         self.img_url = img_url
         self.video_url = video_url

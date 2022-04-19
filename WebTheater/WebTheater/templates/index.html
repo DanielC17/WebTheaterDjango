@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,23 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>exibindo na tela</h1>
+    <h1>Categorias</h1>
+
+    {% for categoria in lista_ctg %}
+
+        <h3>{{categoria.get_titulo}}</h3>
+        <img src="{% static 'img/' %}{{categoria.get_img_url}}"> 
+
+        {% for video in categoria.get_list_video%}
+
+            <img src="{% static 'img/' %}{{video.get_img_url}}">
+            
+            <a href="{% url 'videos' video.get_id %}">{{video.get_titulo}}</a>
+
+        {% endfor %}
+
+    {% endfor %}
+
+
 </body>
 </html>
