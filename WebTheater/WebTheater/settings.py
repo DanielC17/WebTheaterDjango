@@ -54,7 +54,7 @@ ROOT_URLCONF = 'WebTheater.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["WebTheater/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

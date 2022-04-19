@@ -1,4 +1,4 @@
-from video import Video
+from WebTheater.model.video import Video
 
 class Categoria:
     def __init__(self, id, titulo, descricao, img_url, list_video: list[Video]):
