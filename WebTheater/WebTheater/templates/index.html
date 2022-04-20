@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Home</title>
 </head>
 <body>
+    <div class="titulo">
     <h1>Categorias</h1>
+    </div>
 
     {% for categoria in lista_ctg %}
 
-        <h3>{{categoria.get_titulo}}</h3>
-        <img src="{% static 'img/' %}{{categoria.get_img_url}}"> 
+        <h2>{{categoria.get_titulo}} - {{categoria.get_descricao}}</h2>
+       
+        <img src="{% static 'img/' %}{{categoria.get_img_url}}" class="img_catego"> 
 
         {% for video in categoria.get_list_video%}
 
-            <img src="{% static 'img/' %}{{video.get_img_url}}">
+        <div>
+            <ul>
+            <h4>{{video.get_titulo}}</h4>    
+            <img src="{% static 'img/' %}{{video.get_img_url}}" class="img_video">
             
-            <a href="{% url 'videos' video.get_id %}">{{video.get_titulo}}</a>
-
+            <button class="bt_detalhes"><a href="{% url 'videos' video.get_id %}">Ver Detalhes</a></button>
+            </ul>
+        </div>
+        <hr>
         {% endfor %}
 
     {% endfor %}

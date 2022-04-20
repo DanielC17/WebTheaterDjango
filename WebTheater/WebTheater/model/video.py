@@ -62,7 +62,7 @@ class Video:
 
 
     def get_qtd_visualizacao(self):
-        return qtd_visualizacao
+        return self.qtd_visualizacao
 
     def set_qtd_visualizacao(self, qtd_visualizacao):
         self.qtd_visualizacao = qtd_visualizacao    

@@ -1,0 +1,25 @@
+body {
+    width: 80%;
+    margin-left: 10%;
+}
+
+h1{
+    font-size: 36pt;
+    font-family:sans-serif;
+}
+
+h2{
+    font-size: 20;
+    font-family: sans-serif;
+}
+
+
+img.img_video {
+    width: 300px;
+    height: 200px;
+}
+
+
+a{
+    text-decoration: none;
+}
